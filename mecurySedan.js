@@ -16,7 +16,7 @@ class Car extends VehicleModule {
         if ((num+this.passenger) < this.maximumPassengers){
             let availableRoom = this.maximumPassengers - this.passenger;
             return availableRoom;
-        }else {
+        } else {
             console.log('The ' + this.model + ' '+ this.make + 'does not have enough room' )
         }
 
@@ -25,7 +25,7 @@ class Car extends VehicleModule {
         if(this.fuel > 0){
             console.log("Car has enough gas to start.");
             return this.started =true;
-        }else {
+        } else {
             console.log('Please add fuel to start the car');
             return this.started=false;
         }
@@ -42,9 +42,5 @@ class Car extends VehicleModule {
        }
 }
 
-
-//this shows how to call from this module...
-let v = new VehicleModule("Mecury", "A28 Sedan", "1965", "Black", "20000")
-console.log(v.make)
-
-v.loadPassenger(6);
+let A28 = new VehicleModule("Mercury","A28 Sedan","2020","black","20000")
+console.log(A28.scheduleService(20000))
